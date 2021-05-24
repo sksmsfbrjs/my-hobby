@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Multiplication_table {
+	public static void main(String[] args) {
+		int score = 0;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("게임을 시작하시겠습니까? => yes or no ");
+		
+		String ans = sc.nextLine();
+		if(ans.equals("no")) {
+			run = !run;
+			System.out.println("게임을 종료합니다.");
+		} else if(ans.equals("yes")) {
+			System.out.println("스코어가 100점이 되면 종료됩니다.");
+			while(true) {
+				int num1 = (int)(Math.random() * 18) + 2;
+				int num2 = (int)(Math.random() * 19) + 1;
+				int answer = num1 * num2;
+				if(num1 < num2) continue;
+				System.out.print("QUIZ: " + num1 + " * " + num2 + " = ");
+				int inputAns = sc.nextInt();
+
+				if(num1 < num2) continue;
+				if(inputAns == answer) {
+					score += 10;
+					System.out.println("정답!! 점수: " + score + "/100");
+				} else {
+					score -= 10;
+					System.out.println("오답!! 점수: " + score + "/100");
+				}
+				if(score < 100) continue;
+				else {
+					System.out.println("100점 달성!");
+					break;
+				}
+			}
+		} else {
+			System.out.print("다시 시작하시오.");
+		}
+	}
+}
+
