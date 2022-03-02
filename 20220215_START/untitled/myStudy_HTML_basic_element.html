@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>my_HTML_Note</title>
+    <style>
+        br {width: 20px}
+        h1 {
+            text-align: center;
+            border-bottom: 1px solid black;
+            padding: 20px;
+            margin:0px;
+        }
+        a {text-decoration-line: none; color:blue;
+        }
+        ol {
+            border-right: 1px solid black;
+            width: 150px;
+            margin:0px;
+
+        }
+        #grid {
+            display:grid;
+            grid-template-columns: 200px 1fr;
+        }
+        #grid #active {
+
+        }
+        li {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>나의 HTML 노트</h1>
+<div id="grid">
+    <ol>
+        <li><a href="myStudy_HTML.html">HTML이란</a></li>
+        <li><a href="myStudy_HTML_text_element.html">HTML 텍스트 요소</a></li>
+        <li><a href="myStudy_HTML_basic_element.html">HTML 기본 요소</a></li>
+        <li><a href="myStudy_CSS.html">CSS 생활코딩 복습</a></li>
+    </ol>
+    <div id="active">
+        <p>
+            <h2>스타일(style)</h2>
+            HTML 요소의 style 속성(attribute) 이용 시 css 스타일을 HTML 요소에 직접 설정 가능<br>
+            (but, 단 하나의 요소에만 사용 가능)
+            <h3>문법</h3>
+
+            &lt;태그이름 style="속성이름 : 값">
+
+            <h4>ex> 배경색 변경</h4>
+
+            &lt;body style="<b>background-color: aqua</b>"><br>
+                &lt;h1 style="<b>background-color: white</b>">HI&lt;/h1><br>
+            &lt;/body>
+
+            <h4>ex> 글자색 변경</h4>
+                style="color: pink;"
+
+            <h4>ex> 글자 크기 변경</h4>
+                style="font-size: 200%;"
+
+            <h4>ex> 문단정렬 변경</h4>
+                style="text-align: center;"<br><br>
+
+            <b>* 만약 여러스타일을 한번에 하려면<br>
+                style="background-color: pink; font-size: 150%;"</b><hr>
+        </p>
+        <p>
+            <h2>색 (Color)</h2>
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
