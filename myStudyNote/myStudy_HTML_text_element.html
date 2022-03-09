@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>my_HTML_Note</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+  <h1>나의 HTML 노트</h1>
+  <div id="grid">
+    <ol>
+      <li><a href="myStudy_HTML.html">HTML이란</a></li>
+      <li><a href="myStudy_HTML_text_element.html">HTML 텍스트 요소</a></li>
+      <li><a href="myStudy_HTML_basic_element.html">HTML 기본 요소</a></li>
+      <li><a href="myStudy_CSS.html">CSS 생활코딩 복습</a></li>
+    </ol>
+    <div id="active">
+        <h2>제목(Title)</h2>
+        h1~h6까지 있음. h 위아래로 여백 생성됌. <mark>제목의 표현기능 외에 검색엔진의 키워드 수집의 대상이 됌.</mark>
+
+      <p>
+        <h2>단락(Paragraph)</h2>
+        <strong>p</strong> : 단락을 나눌 땐 br태그로 줄바꿈하기 보다는 p태그를 이용하여 사용하는게 중요함
+        단락 경계를 분명히 하고 css를 통해 p태그 디자인 변경 가능.<br>단점은 단락과 단락의 간격이 고정되어 CSS의 margin을 이용해야 함.
+        <br><br>
+        <strong>br</strong> : 줄바꿈 태그, empty tag임.
+        <br><br>
+        <strong>pre</strong> (preformatted text) : HTML코드에서 작성한 서식을 그대로 표현<br><br>
+        <strong>hr</strong> : 수평 가로 구분선
+
+      <p>
+        <h2>서식(Formatting)</h2>
+        <h3>* 강조효과</h3>
+        <strong>b</strong> : 단순 굵게 표현<br>
+        <strong>strong</strong> : 굵게 표현 & <mark>검색엔진 중요도 높음</mark>
+        <h3>* 이태리체</h3>
+        <strong>i</strong> : 단순 표시<br>
+        <strong>em</strong> : 이태리체 & <marK>검색엔진 중요도 높음</marK>
+        <h3>* 하이라이트 효과</h3>
+        <strong>mark</strong> : <mark>이렇게 뜸</mark>
+        <h3>* 삭제효과</h3>
+        <strong>del</strong> : <del>이렇게 뜸</del>
+        <h3>* 삽입효과</h3>
+        <strong>ins</strong> : <ins>이렇게 뜸</ins>
+
+      <p>
+        <h2>인용구(Quotation)</h2>
+        <h3>* 짧은 인용구</h3>
+        <strong>q</strong> : 앞뒤에 큰따옴표
+        <h3>* 블록 인용구</h3>
+        길이가 긴 인용구는 &lt;blockquote&gt;태그 사용. 별도의 단락으로 처리됌
+        <h3>* 축약형 표현(abbreviation)</h3>
+        <b>abbr</b> : abbr 태그가 적용된 문구에 마우스를 대면 풀네임이 나옴<br>
+        ex> &lt;abbr title="풀네임">HTML&lt;/abbr> => <abbr title="이렇게 나옴">HTML</abbr>
+        <h3>* 주소 표현 </h3>
+        <b>address</b> : HTML에서 주소 표현 가능<br>
+        ex> &lt;address> 서울시 &lt;br> 강남구 &lt;/address><br>
+        -> <address>서울시 강남구</address> (위 아래로 공백이 자동
+
+      <p>
+        <h2>주석 표현 (Commet)</h2>
+        주석 : 코드에 대한 설명 or 디버깅을 위해 작성되는 구문<br>
+        1. HTML에서의 작성법 -> &lt;!-- 주석내용 --> <br>
+        2. CSS에서의 작성법 -> /* 주석 내용 */
+
+      <p>
+        <h2>엔티티(Entity)</h2>
+        HTML 예약어를 기존에 사용하던 의미 그대로 사용하기 위해 별도로 만든 문자셋<br>
+        (HTML 예약어를 HTML코드에서 그대로 사용하면 웹브라우저는 평소와 다르게 해석!)<br><br>
+        <b>* 엔티티 형태</b><br>
+        -> &엔티티이름&semi; or &#엔티티숫자(16진수)&semi; <br><br>
+
+        > <a href="https://www.w3.org/TR/html4/sgml/entities.html">https://www.w3.org/TR/html4/sgml/entities.html</a>
+        이 사이트에 들어가면 entity에 관한 내용이 나옴.
+
+      <p>
+        <h2>문자셋(Character set)</h2>
+          웹 브라우저가 HTML 문서를 정확하게 나타내기 위해서는 해당 문서가 어떠한 문자셋으로 저장되었는지를 알아야 합니다.<br>
+          따라서 HTML 문서가 저장될 때 사용된 문자셋에 대한 정보를 &lt;head>태그 내의 &lt;meta>태그에 명시합니다.
+
+          <h4>→ 문자셋의 종류</h4>
+          현재 사용되는 대표적인 문자셋(character set)은 다음과 같습니다.<br>
+
+          1. ASCII : 가장 처음 만들어진 문자셋으로, 인터넷에서 사용할 수 있는 127개의 영문자와 숫자로 이루어져 있습니다.<br>
+          2. ANSI : 윈도우즈에서 만든 문자셋으로, 총 256개의 문자 코드를 지원합니다.<br>
+          3. ISO-8859-1 : 256개의 문자 코드를 지원하는 HTML4의 기본 문자셋입니다.<br>
+          4. UTF-8 : 세상에 있는 거의 모든 문자를 표현할 수 있는 유니코드 문자를 지원하는 HTML5의 기본 문자셋입니다.<br>
+
+
+  </div>
+</div>
+
+</body>
+</html>

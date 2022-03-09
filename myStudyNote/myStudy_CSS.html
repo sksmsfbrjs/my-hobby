@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>my_HTML_Note</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <h1>나의 HTML 노트</h1>
+    <div id="grid">
+        <ol>
+            <li><a href="myStudy_HTML.html">HTML이란</a></li>
+            <li><a href="myStudy_HTML_text_element.html">HTML 텍스트 요소</a></li>
+            <li><a href="myStudy_HTML_basic_element.html">HTML 기본 요소</a></li>
+            <li><a href="myStudy_CSS.html">CSS 생활코딩 복습</a></li>
+        </ol>
+        <div id="active">
+            <H2>생활코딩 CSS편</H2>
+            CSS는 HTML이 정보의 기능에 전념하도록 디자인의 기능을 전체적으로 담당함. 효율적임!
+
+            <h3>CSS의 기능</h3>
+            <ol style="border-right: none; width:100%;">
+                <li>HTML 속성(style) 이용
+                <li>태그 &lt;style> 이용
+            </ol>
+            <p style="border: none;">
+                ex> 글꼴 변경 -> style="color:색이름" <br><br>
+
+                만약 모든 링크의 색깔을 변경해야 한다면?<br>
+                <pre>
+    &lt;head>
+        &lt;style>               ┐
+            a {color:색이름;} │-------> CSS 역할
+        &lt;/style>              ┘
+    &lt;/head>
+                </pre>
+                a {color:색이름;} 에서 a는 선택자(Selector), color는 속성(Property), 색이름은 속성값(Property Value)이며, a 선택자에 color:색이름 으로 선언(Declaration)한다고 칭한다.<br><br>
+
+                만약 모든 링크의 밑줄을 없애고 싶다면 CSS style 태그에 text-decoration: none; 추가!<br>
+                (특정 하나만 긋고 싶다면 HTML 코드 내 &lt;a style="text-decoration: underline"> 추가!)
+
+            <p>
+                <h3>7. CSS 선택자의 기본</h3>
+                &lt;a style="color:red">HTML&lt;/a><br>
+                &lt;a style="color:red">&lt;/a><br>
+                이렇게 쓰게 될 경우 코드가 중복됌!<br>
+                <h4> 따라서 클래스를 정의 한 후 클래스를 적용!</h4>
+                class: <u>그룹으로 묶어서 스타일을 지정할 때 쓰는 선택자.</u><br>
+                id 선택자: <u>스타일을 지정할 때 한 가지만 지정해서 쓰는 이름</u> , 중복 x!<br><br>
+                ex>
+                <pre>
+    &lt;style>
+        a {
+            ~
+        }
+        .saw {             -> .class이름 선택자
+            color:red;
+        }
+        .active {
+            color:gray;
+        }
+        #gogo {             -> #id 선택자
+            color:blue;
+        }
+
+        ...
+
+    &lt;a ~ class="saw active" id="gogo">HTML&lt;/a>
+
+                </pre>
+                <h4>실행 순서</h4>
+                #id 선택자 > .class이름 선택자 > 태그 선택자<br><br>
+
+                → 만약 id가 없다면 CSS style 태그에서 실행 순서가 saw가 active보다 앞에 있으므로 나중 순서인 active가 적용됌.<br>
+
+                <b>설계 시, 전체적으로 틀을 짠 후 예외적인 것들을 짜는게 효율성이 좋다!</b>
+            <p>
+                <h3>8. 박스 모델</h3>
+                h1 같은 태그는 stylesheet가 화면 전체에 적용되는 반면에, a 같은 태그는 그 칸 안에서만 stylesheet가 적용됌.<br>
+                이와 같이 h1과 같은 태그는 <b>block level element</b>, a와 같은 태그는 <b>inline element</b>라고 한다.
+
+                <br>ex>
+                <h4 style="border: 3px solid green;">block level element</h4>
+                <a style="border: 3px solid green;">inline element</a><br><br>
+
+                <u> * 만약 block level element를 inline처럼 쓰려면 css 태그에 <b>display: inline;</b> 를 기입.
+                    반대의 경우엔, <b>display: block;</b> 를 기입하면 됌.</u><br>
+                <b>display: none;</b>  : 태그를 안 보이게 함.
+
+
+
+        </div>
+    </div>
+
+</body>
+</html>
