@@ -4,38 +4,14 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="style.css">
-    <script>
-        function nightDayHandler(self) {
-            var target = document.querySelector('body');
-            if(self.value === 'night') {
-                target.style.backgroundColor = 'black';
-                target.style.color = 'white';
-                self.value = 'day';
-
-                var links = document.querySelectorAll('a');
-                for(var i=0; i<links.length; i++) {
-                    links[i].style.color = 'powderblue';
-                }
-
-            } else {
-                target.style.backgroundColor = 'white';
-                target.style.color = 'black';
-                self.value = 'night';
-
-                var links = document.querySelectorAll('a');
-                for(var i=0; i<links.length; i++) {
-                    links[i].style.color = 'black';
-                }
-            }
-        }
-    </script>
+    <script src="color.js"></script>
 </head>
 <body>
     <h1><a href="index.html">WEB</a></h1>
 
     <input type="button" value="night" onclick="
-        nightDayHandler(this)
-">
+            nightDayHandler(this)
+    ">
 
     <div id="grid">
         <ol>
@@ -46,11 +22,11 @@
         <div id="article">
             <h2><u>JavaScript</u></h2>
             <p>
-                JavaScript often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.
-                Alongside HTML and CSS, JavaScript is one of the three core technologies of World Wide Web content production.
+                <span id="first" class="js">JavaScript</span> often abbreviated as JS, is a high-level, dynamic, weakly typed, prototype-based, multi-paradigm, and interpreted programming language.
+                Alongside HTML and CSS, <span class="js">JavaScript</span> is one of the three core technologies of World Wide Web content production.
                 It is used to make webpages interactive and provide online programs, including video games.
                 The majority of websites employ it, and all modern web browsers support it without the need for plug-ins by means of a built-in JavaScript engine.
-                Each of the many JavaScript engines represent a different implementation of JavaScript,
+                Each of the many <span class="js">JavaScript</span> engines represent a different implementation of <span class="js">JavaScript</span>,
                 all based on the ECMAScript specification, with some engines not supporting the spec fully,
                 and with many engines supporting additional features beyond ECMA.
             </p>
